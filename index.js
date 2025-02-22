@@ -28,7 +28,7 @@ async function run() {
     const usersCollection = client.db("taskTracker").collection("users");
     const tasksCollection = client.db("taskTracker").collection("tasks");
 
-
+    // save all user in db
     app.post("/users", async (req, res) => {
       const user = req.body;
       const query = { email: user.email };
