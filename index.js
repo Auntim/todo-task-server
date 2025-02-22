@@ -71,7 +71,7 @@ async function run() {
       }
     });
 
-    // GET: Retrieve tasks for 
+    // GET: Retrieve tasks for from database
     app.get("/tasks", async (req, res) => {
       try {
         const { addedBy } = req.query;
@@ -191,7 +191,7 @@ run().catch(console.dir);
 
 app.get("/", (req, res) => {
   res.send("task-tracker server is running");
-}); // Add this closing bracket
+});
 app.listen(port, () => {
-  console.log(`task-tracker server is running on port ${port}`);
+  console.log(`task server is running on port ${port}`);
 });
