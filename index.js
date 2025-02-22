@@ -40,6 +40,7 @@ async function run() {
       res.send(result);
     });
 
+    // get all the users
     app.get("/users", async (req, res) => {
       const result = await usersCollection.find().toArray();
       res.send(result);
@@ -47,7 +48,7 @@ async function run() {
 
     // ! Task related APIs --------------------------------------------
 
-    // POST: Add a new task
+    // POST: Add a new task in database
     app.post("/tasks", async (req, res) => {
       try {
         const task = {
