@@ -100,7 +100,7 @@ async function run() {
       res.send(task);
     });
 
-    // delete taskjs
+    // delete api in db
     app.delete("/tasks/:id", async (req, res) => {
       try {
         const id = req.params.id;
